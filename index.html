@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<script>
+    function verificarRespuesta(preguntaId, respuestaCorrecta) {
+        var selectElement = document.getElementById(preguntaId);
+        var selectedOption = selectElement.value;
+
+        if (selectedOption === respuestaCorrecta) {
+            alert("Respuesta correcta");
+        } else {
+            alert("Respuesta incorrecta");
+        }
+    }
+</script>
+
+<html>
+<head>
+    <title>Formulario de Preguntas y Respuestas</title>
+    <style> 
+        body {
+            background-color: #CCD1D1 ;
+            
+        }
+         
+    </style>
+</head>
+<body>
+    <img class="logo" src="logo.png" alt="Logo de la empresa" style="max-width: 100px; height: 100px; display: block; margin: 40 auto;">
+
+
+    <form action="procesar_formulario.php" method="POST">
+    <h2>Formulario de Preguntas y Respuestas</h2>
+
+    <h3> Mira el siguiente video</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KcAG4V8f7rk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h3> Responde las siguentes preguntas</h3>
+    <form action="procesar_formulario.php" method="POST">
+       
+        <label for="pregunta1">La principal recomendación para proteger la información de tu dispositivo móvil es: Elige una opción:</label>
+        <select id="pregunta1" name="pregunta1" required onchange="verificarRespuesta('pregunta1', 'opcion1')">
+            <option value="">Selecciona una opción</option>
+            <option value="opcion1">No conectarse a redes públicas, en lugares como restaurantes o centros comerciales</option>
+            <option value="opcion2">Utilizar el dispositivo en modo avión cuando estés en tu casa</option>
+            <option value="opcion3">No transportar a ningún lado tu dispositivo móvil</option>
+            <option value="opcion4">Permitir el acceso a servicios de terceros y apk’s fuera de la Play Store</option>
+        </select>
+
+       
+
+        <h1> </h1>
+
+        <label for="pregunta2"> Al salir y movilizarte con tu dispositivo móvil, una recomendación que deberías implementar es: Elige una opción:</label>
+        <select id="pregunta2" name="pregunta2" required onchange="verificarRespuesta('pregunta2', 'opcion3')">
+            <option value="">Selecciona una opción</option>
+            <option value="opcion1">Apagar tu dispositivo durante todo el viaje</option>
+            <option value="opcion2">Meterlo en una bolsa de plástico, para evitar que sea comprometido</option>
+            <option value="opcion3">Desactivar el Wi-Fi, para que no envíe señales a dispositivos como Acces Point o Routers </option>
+            <option value="opcion4">Bajar todo el volumen y llevarlo en modo vibrador</option>
+        </select>
+
+        <h1> </h1>
+
+        <label for="pregunta3"> Es un peligro que existe en nuestro dispositivo móvil: Elige una opción:</label>
+        <select id="pregunta3" name="pregunta3" required onchange="verificarRespuesta('pregunta3', 'opcion4')">
+            <option value="">Selecciona una opción</option>
+            <option value="opcion1">Geolocalización</option>
+            <option value="opcion2">Red WI-FI activa</option>
+            <option value="opcion3">Factor de portabilidad </option>
+            <option value="opcion4">Todas las anteriores</option>
+        </select>
+
+        <h1> </h1>
+
+        <label for="pregunta4">  ¿El antivirus para dispositivomóvil, es la aplicaciónindispensable que protegepor completo la información? Elige una opción: </label>
+        <select id="pregunta4" name="pregunta4" required onchange="verificarRespuesta('pregunta4', 'opcion2')">
+            <option value="">Selecciona una opción</option>
+            <option value="opcion1">Verdadero</option>
+            <option value="opcion2">Falso</option>
+        </select>
+
+        <h1> </h1>
+
+        <label for="pregunta5">¿Cuál es el mejor antivirus para tu dispositivomóvil?:  Elige una opción:</label>
+        <select id="pregunta5" name="pregunta5" required onchange="verificarRespuesta('pregunta5', 'opcion3')">
+            <option value="">Selecciona una opción</option>
+            <option value="opcion1">ESET NOD32</option>
+            <option value="opcion2">Avast</option>
+            <option value="opcion3">El sentido comun</option>
+            <option value="opcion4">Todas las anteriores</option>
+        </select>
+
+        <h3> © Grupo DarkCode todos los derechos reservados</h3>
